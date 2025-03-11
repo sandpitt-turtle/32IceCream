@@ -6,7 +6,6 @@ const morgan = require('morgan');
 const app = express();
 const client = new pg.Client(process.env.DATABASE_URL || 'postgres://localhost/acme_cream_notes_db');
 
-// middle
 app.use(morgan('dev'));
 app.use(express.json()); // Allows JSON request body parsing
 
